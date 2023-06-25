@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Example responsive styles */
+        @media screen and (max-width: 600px) {
+            .navbar {
+                flex-direction: column;
+                align-items: center;
+            }
+            .collegelogo {
+                margin-bottom: 10px;
+            }
+            .search {
+                margin-top: 10px;
+                margin-bottom: 10px;
+            }
+            body {
+            font-family: Arial, sans-serif;
+        }
+
+        .chat-container {
+            border: 2px solid #333;
+            max-width: 500px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        #chatbox {
+            width: 100%;
+            height: 300px;
+            border: 1px solid #ccc;
+            background-color: #f9f9f9;
+            overflow-y: scroll;
+            padding: 10px;
+            margin-bottom: 20px;
+        }
+
+        .message {
+            background-color: #f2f2f2;
+            border-radius: 10px;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+
+        .user-message {
+            background-color: #e2f7f7;
+            color: #006680;
+        }
+
+        .user-message p {
+            margin: 0;
+        }
+
+        .user-message span {
+            color: #999;
+            font-size: 12px;
+            margin-left: 5px;
+        }
+
+        .bot-message {
+            background-color: #f2e5ff;
+            color: #6200a3;
+        }
+
+        .bot-message p {
+            margin: 0;
+        }
+
+        .bot-message span {
+            color: #999;
+            font-size: 12px;
+            margin-right: 5px;
+        }
+
+        #messageInput {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin-top: 10px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .catalog1:hover
+        {
+            background-color: #ffffff;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+            
+            .littleoptions {
+                flex-direction: column;
+                align-items: center;
+            }}
+    </style>
+<body class="body">
+    <!-- <div class="new"></div> -->
+    <div class="new2">
+        <div class="pannel1">
+            <div class="panneloption">
+                <div class="catalog1">
+                    <a href=""><h2>Encrypted Messaging</h2></a>
+                    <a href=""><h2>File Transfers</h2></a>
+                    <a href=""><h2>Legal Phishing</h2></a>
+                    <a href=""><h2>Operating Systems</h2></a>
+                    <a href=""><h2>Fake Identity Generator</h2></a>
+                    <a href=""><h2>OSINT Framework</h2></a>
+                    <a href=""><h2>Free Cloud Storages</h2></a>
+                    <a href=""><h2>Hardware</h2></a>
+                </div>
+                <div class="catalogBottom">&copy;CkEve911 2023</div>
+            </div>
+        </div>
+        <div class="main">
+            <div class="content">
+                <div class="chat-container">
+                    <div id="chatbox" style="background-color: #8dcedf; "></div>
+                    <div>
+                        <input type="text" id="messageInput" placeholder="Type your message..." />
+                        <button onclick="sendMessage()">Send</button>
+                    </div>
+                </div>
+                
+                
+                
+            </div>
+    </div>
+    </div>
+    <div class="new">
+        <div class="navbar">
+            <div class="collegelogo">
+                <span class="logo-text">DarkWebMarketplace</span>
+            </div>
+            
+            <a href="index.html"><h3>Home</h3></a>
+            <a href="exploits.html"><h3>Exploits</h3></a>
+            <div class="homenavigation"><a href="chatroom.html"><h3>Forums</h3></a></div>
+            <a href="blogs.html"><h3>Blogs</h3></a>
+            <a href="news.html"><h3>News</h3></a>
+            <a href="Tools.html"><h3>Tools</h3></a>
+            <div class="search">
+                <input type="text" placeholder="Search">
+                <button type="submit">Search</button>
+            </div>
+
+        </div>
+    </div>
+    <div class="littleoptions">
+        <div class="littleoptions1">
+        <div class="up">^</div>
+        </div>
+        <div class="littleoptions2"></div>
+    </div>
+</body>
+<script src="https://www.gstatic.com/firebasejs/8.7.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.7.0/firebase-database.js"></script>
+
+<script>
+  // Initialize Firebase
+  var firebaseConfig = {
+    apiKey: "AIzaSyBFPknN0xisBTdYfL5JVg93iakUGIDS-5s",
+    authDomain: "darkwebmarketplace-131cc.firebaseapp.com",
+    projectId: "darkwebmarketplace-131cc",
+    storageBucket: "darkwebmarketplace-131cc.appspot.com",
+    messagingSenderId: "927973126295",
+    appId: "1:927973126295:web:5fff7f083a4be8b5d4f9d2",
+    measurementId: "G-SYQ1ZX97B8"
+  };
+
+  firebase.initializeApp(firebaseConfig);
+  const database = firebase.database();
+</script>
+
+<!-- <script>
+  function sendMessage() {
+    var message = document.getElementById("messageInput").value;
+    if (message !== "") {
+      var currentDate = new Date().toLocaleString();
+      var timestamp = "[" + currentDate + "] ";
+      var messageWithTimestamp = timestamp + message;
+
+      // Save the message to Firebase
+      database.ref("messages").push().set({
+        content: messageWithTimestamp,
+        timestamp: currentDate
+      });
+
+      document.getElementById("messageInput").value = "";
+    }
+  }
+</script> -->
+
+
+
+
+
+
+<script>
+    function encryptMessage(message) {
+      var encryptedMessage = "";
+      for (var i = 0; i < message.length; i++) {
+        var charCode = message.charCodeAt(i);
+        var encryptedCharCode = charCode + 9800; // Perform a simple substitution by incrementing the character code by 1
+        encryptedMessage += String.fromCharCode(encryptedCharCode);
+      }
+      return encryptedMessage;
+    }
+  
+    function sendMessage() {
+      var message = document.getElementById("messageInput").value;
+      if (message !== "") {
+        var currentDate = new Date().toLocaleString();
+        var timestamp = "[" + currentDate + "] ";
+        var messageWithTimestamp = timestamp + message;
+  
+        // Encrypt the message
+        var encryptedMessage = encryptMessage(messageWithTimestamp);
+  
+        // Save the encrypted message to Firebase
+        database.ref("messages").push().set({
+          content: encryptedMessage,
+          timestamp: currentDate
+        });
+  
+        document.getElementById("messageInput").value = "";
+      }
+    }
+  </script>
+  
+
+
+
+
+
+
+
+
+  <script>
+
+  
+    function decryptMessage(encryptedMessage) {
+      var decryptedMessage = "";
+      for (var i = 0; i < encryptedMessage.length; i++) {
+        var charCode = encryptedMessage.charCodeAt(i);
+        var decryptedCharCode = charCode - 9800; // Reverse the substitution by decrementing the character code by 1
+        decryptedMessage += String.fromCharCode(decryptedCharCode);
+      }
+      return decryptedMessage;
+    }
+  
+    // Listen for new messages from Firebase
+    database.ref("messages").on("child_added", function(snapshot) {
+      var message = snapshot.val();
+      var encryptedContent = message.content;
+  
+      // Decrypt the message
+      var decryptedContent = decryptMessage(encryptedContent);
+  
+      var messageElement = document.createElement("p");
+      messageElement.innerText = decryptedContent;
+  
+      document.getElementById("chatbox").appendChild(messageElement);
+    });
+  </script>
+  
+  
+
+</html>
