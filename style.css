@@ -1,0 +1,198 @@
+.body
+{
+    background-color: rgb(91, 102, 165);
+    /* background-color: rgb(185, 185, 224); */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+
+
+
+
+.new
+{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    height: 15vh;
+    width: 110%;
+    background-color: rgb(91, 102, 165);
+    position: fixed;
+    margin-bottom: 90vh;
+    
+}
+.new2
+{
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+    width: 100%;
+    /* background-color: rgb(91, 102, 165); */
+    border-radius: 25px;
+}
+.catalog1
+{
+    margin-left: 3vh;
+}
+
+.homenavigation
+{
+    background-color: rgb(145, 145, 219);
+    width: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius:25px ;
+    cursor: pointer;
+}
+
+
+
+.pannel1
+{
+    background-color: rgb(200, 207, 212);
+    height: 100%;
+    width: 23%;
+    position: fixed;
+    margin-top: 12vh;
+    gap: 10vh;
+}
+.main
+{
+    background-color: rgb(250, 250, 250);
+    height: 800vh;
+    width: 85%;
+    margin-left: 23%;
+    margin-top: 12vh;
+    gap: 10vh;
+}
+.content
+{
+    margin-left: 2vh;
+    font-family: "Arial", sans-serif;
+}
+.catalogBottom
+{
+    left: 2vh;
+    position: relative;
+    top: 27vh;
+}
+.newsmain
+{
+    margin-left:5vh;
+}
+
+
+
+
+
+.littleoptions
+{
+    margin-top: 65vh;
+    margin-left: 150vh;
+    height:30vh;
+    width: 30vh;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+}
+.littleoptions1
+{
+    height: 10vh;
+    width: 10vh;
+    background-color: rgb(105, 90, 191);
+    position: fixed;
+    border-radius: 45px;
+    margin-left: 13%;
+    margin-top: 4%;
+    cursor: pointer;
+}
+.littleoptions2
+{
+    height: 8vh;
+    width: 15%;
+    margin-top:20vh ;
+    margin-left: 8vh;
+    border-radius: 25px;
+    background-color: rgb(93, 141, 213);
+    cursor: pointer;
+    position: fixed;
+}
+h3 {
+    color: white;
+    font-family: "Arial", sans-serif;
+    /* Add any additional font properties or styles here */
+  }
+
+  .up {
+    margin-left: 18px;
+    margin-top: 2px;
+    text-shadow: white;
+    font-family: "Arial", sans-serif;
+    color: white; /* Set the text color to white */
+    font-size: 5rem; /* Adjust the value as needed */
+    /* Add any additional font properties or styles here */
+  }
+  
+  
+.navbar
+{
+    display: flex;
+    gap: 9vh;
+    /* margin-left: 50vh; */
+}
+.search
+{
+    margin-top: 3vh;
+}
+
+
+
+
+
+.panneloption
+{
+    color: rgb(0, 0, 0);
+    font-family: "Arial", sans-serif;
+    /* background-color: rgb(111, 111, 197); */
+}
+
+
+
+
+
+.collegelogo {
+    height: 7vh;
+    width: 20vh;
+    margin-right: 12vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.logo-text {
+    font-size: 4vh;
+    font-weight: bold;
+    color: #FFFFFF;
+    background-color: #303061;
+    padding: 10px;
+    border-radius: 50%;
+    width: 4vh;
+    height: 4vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  }
+
+
+
+
+  .circle-image {
+    border-radius: 50%;
+  }
+  
